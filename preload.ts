@@ -15,3 +15,5 @@ window.addEventListener("DOMContentLoaded", () => {
     replaceText(`${type}-version`, (process.versions)[type]);
   }
 });
+// @ts-ignore
+window.preloadWasRun = 'preload was run';

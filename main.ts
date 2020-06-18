@@ -1,19 +1,19 @@
 import { app, BrowserWindow } from "electron"
-import * as path from "path"
-import * as cp from 'child_process'
+import path from "path"
+import cp from 'child_process'
 
-const isProd = process.env.NODE_ENV === 'production'
+let isProd = process.env.NODE_ENV === 'production'
+let mainWindow
 
 async function startAdonis() {
-  cp.execFile('node', ['server.js', !isProd ? '--dev' : ''])
+  cp.execFile('node', [`${path.join(__dirname,'./server.js')}`, !isProd?'--dev':''])
 }
 
 async function createWindow() {
   // Create the browser window.
   // preload: path.join(__dirname, "preload.js"),
-  await startAdonis();
 
-  const mainWindow = new BrowserWindow({
+  mainWindow = new BrowserWindow({
     height: 600,
     webPreferences: {
       nodeIntegration: true
@@ -21,11 +21,13 @@ async function createWindow() {
     width: 800
   })
 
+  await startAdonis()
+
   // and load the index.html of the app.
-  mainWindow.loadFile(path.join(__dirname, "index.html"))
+  mainWindow.loadFile('index.html')
 
   // Open the DevTools.
-  mainWindow.webContents.openDevTools();
+  mainWindow.webContents.openDevTools()
 }
 
 // This method will be called when Electron has finished

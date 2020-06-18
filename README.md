@@ -1,6 +1,6 @@
-# Adonis Electron fullstack application
+# Adonis5 with Electron fullstack blog application
 
-This is the fullstack boilerplate for AdonisJs with Electron, it comes pre-configured with.
+This is the fullstack blog application for AdonisJs with Electron, it comes pre-configured with.
 
 1. Bodyparser
 2. Session
@@ -16,6 +16,7 @@ This is the fullstack boilerplate for AdonisJs with Electron, it comes pre-confi
 
 1. Manually clone the repo and then run `npm install`.
 2. Copy .env.example and rename into .env, fill in the environment
+3. Use localhost or 127.0.0.1 instead of 0.0.0.0
 
 ### Migrations
 
