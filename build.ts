@@ -3,7 +3,7 @@ import shell from 'shelljs';
 const buildFolder = './build/';
 
 const files = new Set(['index.html']);
-// const folders = new Set(['./src/views', './src/public']);
+const folders = new Set(['./windows']);
 
 // Create build directory
 // shell.mkdir('-p', buildFolder);
@@ -14,6 +14,6 @@ files.forEach((file) => {
 });
 
 // Copy Folders
-// folders.forEach((folder) => {
-//   shell.cp('-R', folder, buildFolder);
-// });
+folders.forEach((folder) => {
+  shell.cp('-R', folder, buildFolder);
+});
