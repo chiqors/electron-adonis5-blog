@@ -1,0 +1,51 @@
+{
+  "name": "electron-adonis5-blog",
+  "adonis-version": "5.0-preview",
+  "description": "The fullstack blog application for Adonisjs 5 with Electron",
+  "main": "main.js",
+  "scripts": {
+    "lint": "eslint . --ext=.ts",
+    "start": "node ace build && ts-node build.ts && electron build/main.js",
+    "nodeserver": "node build/server.js --dev",
+    "test": "electron build/main.js"
+  },
+  "keywords": [
+    "adonisjs",
+    "adonis5",
+    "blog",
+    "electron",
+    "adonis-app"
+  ],
+  "author": "",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@adonisjs/ace": "^6.9.3",
+    "@adonisjs/core": "^5.0.0-preview-rc-1.6",
+    "@adonisjs/fold": "^6.3.5",
+    "@adonisjs/ignitor": "^2.0.8",
+    "@adonisjs/lucid": "^8.1.1",
+    "@adonisjs/session": "^3.0.3",
+    "@adonisjs/view": "^2.0.6",
+    "mysql": "^2.18.1",
+    "proxy-addr": "^2.0.6",
+    "reflect-metadata": "^0.1.13",
+    "source-map-support": "^0.5.19"
+  },
+  "devDependencies": {
+    "@adonisjs/assembler": "^2.1.2",
+    "@types/shelljs": "^0.8.8",
+    "adonis-preset-ts": "^1.0.4",
+    "eslint": "^7.2.0",
+    "eslint-plugin-adonis": "^1.0.10",
+    "pino-pretty": "^4.0.0",
+    "shelljs": "^0.8.4",
+    "ts-node": "^8.10.2",
+    "typescript": "^3.9.5",
+    "youch": "^2.0.10",
+    "youch-terminal": "^1.0.0"
+  },
+  "autoload": {
+    "App": "./app"
+  }
+}

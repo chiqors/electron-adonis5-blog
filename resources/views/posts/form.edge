@@ -1,0 +1,17 @@
+@layout('app')
+
+@section('page')
+  <form action="{{ post ? route('PostsController.update', { params: { id: post.id } }) : route('PostsController.store') }}" method="POST">
+    <div>
+      <label for="title">Title</label>
+      <input name="title" type="text" value="{{ post ? post.title : '' }}">
+    </div>
+
+    <div>
+      <label for="content">Content</label>
+      <textarea name="content">{{ post ? post.content : '' }}</textarea>
+    </div>
+
+    <button type="submit">{{ post ? 'Update' : 'Create' }}</button>
+  </form>
+@endsection

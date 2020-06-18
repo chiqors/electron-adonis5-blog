@@ -1,0 +1,17 @@
+@layout('app')
+
+@section('page')
+  @each(post in posts)
+  <article>
+    <h2>
+      <a href="{{ route('PostsController.show', { params: { id: post.id } }) }}">{{ post.title }}</a>
+    </h2>
+  </article>
+  @else
+  <article>
+    <h2>
+      No Posts Available
+    </h2>
+  </article>
+  @endeach
+@endsection

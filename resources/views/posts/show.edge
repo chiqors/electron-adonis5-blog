@@ -1,0 +1,26 @@
+@layout('app')
+
+@section('page')
+<h1>{{ post.title }}</h1>
+<p>{{ post.content }}</p>
+<a href="{{ route('PostsController.edit', { params: { id: post.id } }) }}">Edit</a>
+<br>
+<form action="{{ route('PostsController.destroy', { params: { id: post.id } }) }}?_method=DELETE" method="POST">
+  <button type="submit">Delete</button>
+</form>
+<hr>
+<h2>Comments:</h2>
+<form action="{{ route('CommentsController.store', { params: { post_id: post.id } }) }}" method="POST">
+  <label for="message">Message</label>
+  <input name="message" type="text">
+
+  <button type="submit">Send</button>
+</form>
+<ul>
+  @each(comment in post.comments)
+  <li>{{ comment.message }}</li>
+  @else
+  <li>No Comments Available</li>
+  @endeach
+</ul>
+@endsection
