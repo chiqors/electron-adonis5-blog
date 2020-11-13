@@ -23,7 +23,7 @@ This is the fullstack blog application for AdonisJs with Electron, it comes pre-
 Run the following command to run startup migrations.
 
 ```js
-adonis migration:run
+node ace migration:run
 ```
 
 ### Development
