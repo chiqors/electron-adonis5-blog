@@ -27,7 +27,7 @@
     "@adonisjs/lucid": "^8.1.1",
     "@adonisjs/session": "^3.0.3",
     "@adonisjs/view": "^2.0.6",
-    "electron": "^9.3.1",
+    "electron": "^13.6.6",
     "mysql": "^2.18.1",
     "proxy-addr": "^2.0.6",
     "reflect-metadata": "^0.1.13",
