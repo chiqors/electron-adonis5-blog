@@ -21,10 +21,10 @@
   "private": true,
   "dependencies": {
     "@adonisjs/ace": "^6.9.3",
-    "@adonisjs/core": "^5.0.0-preview-rc-1.6",
+    "@adonisjs/core": "^5.9.0",
     "@adonisjs/fold": "^6.3.5",
     "@adonisjs/ignitor": "^2.0.8",
-    "@adonisjs/lucid": "^8.1.1",
+    "@adonisjs/lucid": "^18.3.0",
     "@adonisjs/session": "^3.0.3",
     "@adonisjs/view": "^2.0.6",
     "electron": "^9.3.1",
